@@ -192,7 +192,7 @@
 const express = require('express')
 const path =  require('path')
 const hbs = require('hbs')
-
+const port = process.env.PORT || 3000    
 const app = express()
 
 //defalt configration of Express 
@@ -276,6 +276,6 @@ app.get('*' , (req, res) => {
 })
 
 
-app.listen(3000 , ()=>{
-    console.log("port 3000")
+app.listen(port , ()=>{
+    console.log("port " + port)
 })

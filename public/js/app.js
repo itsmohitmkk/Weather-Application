@@ -24,7 +24,7 @@ weather_form.addEventListener('submit', (e) => {
          mess_1.textContent = "Error"
          mess_2.textContent = "Enter a location"
     }else{
-    const url = 'http://localhost:3000/weather?search=' + encodeURIComponent(location)
+    const url = '/weather?search=' + encodeURIComponent(location)
    
     fetch(url).then((response) => {
         response.json().then((data) => {
