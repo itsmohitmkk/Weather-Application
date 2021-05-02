@@ -231,8 +231,8 @@ app.get('/product' , (req , res)=>{
 
 app.get('/about' , (req,res) =>{
     return res.render('about' ,{
-        name: "Mohit Kumar",
-        text : "Backend Developer"
+        name: "Shandli Kamal",
+        text : "Love of my life"
     })
 })
 
