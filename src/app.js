@@ -228,6 +228,22 @@ app.get('/product' , (req , res)=>{
         products : []
     })
 })
+
+app.get('/about' , (req,res) =>{
+    return res.render('about' ,{
+        name: "Mohit Kumar",
+        text : "Backend Developer"
+    })
+})
+
+app.get('/help' , (req,res) =>{
+    return res.render('help' , {
+        name :"Mohit Kumar",
+        title  : "Superman is here to help"
+    })
+})
+
+
 //****************** */
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
@@ -239,6 +255,8 @@ app.get('/weather' , (req,res)=>{
             address : req.query.search
         })
     }
+
+
 
     geocode(req.query.search, (error,data)=>{
         if(error != undefined){
